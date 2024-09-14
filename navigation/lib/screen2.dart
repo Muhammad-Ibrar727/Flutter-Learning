@@ -15,18 +15,29 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
       return Scaffold(
       appBar: AppBar(
-        title: const Text('screen2'),
+        backgroundColor: Color(0xff764abc),
+        title: const Text('Chats',style: TextStyle(color: Colors.white),),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: TextButton(
-              onPressed: (){
-                Navigator.pop(context);
-              },
-              child: const Text('Back to Home')),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 40,
+              itemBuilder:(context,index){
+                return const ListTile(
+                    leading:CircleAvatar(
+                      backgroundImage: AssetImage('images/profile.jpeg')
+                      ),
+                    title: const Text('Muhammad Ibrar'),
+                    subtitle: Text('Hello'),
+                    trailing: Text('5:50pm'),
+                    
+                   
+                  );
+                  
+              } ),
           )
         ],
       ),
