@@ -17,42 +17,28 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Widgets'),
         ),
-        body: const SafeArea(
+        body:  SafeArea(
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                child: ListTile(
-                  leading: CircleAvatar(
-                  backgroundImage: AssetImage('images/image.jpg'),
-                  ),
-                  title: Text('Hammad Manzoor'),
-                  subtitle: Text('Result aya to bhejna...'),
-                  trailing: Text('7:00pm'),
+                child: ListView.builder(
+                  itemCount: 70,
+                  itemBuilder: (context, index) {
+                    return const ListTile(
+                    leading: CircleAvatar(
+                    backgroundImage: AssetImage('images/image.jpg'),
+                    ),
+                    title: Text('Muhammad Ibrar'),
+                    subtitle: Text('Hello! how are you'),
+                    trailing: Text('6:20pm'),
+                  );
+                  },
                 ),
-              ), 
-              Expanded(
-                child: ListTile(
-                  leading: CircleAvatar(
-                  backgroundImage: AssetImage('images/image.jpg'),
-                  ),
-                  title: Text('Muhammad Qaiser'),
-                  subtitle: Text('Oye Result bhjna'),
-                  trailing: Text('6:20pm'),
-                ),
-              ),
+              )
 
-            //  Expanded(child: 
-              // ListView.builder(
-              //   itemCount: 2,
-              //   itemBuilder: (context,index){
-              //     return null;
-                
-
-              //   },
-              //   ))
-           ]
+             
+               
+            ],
           )
         ),
       ),

@@ -15,7 +15,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
       return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff764abc),
+        backgroundColor: const Color(0xff764abc),
         title: const Text('Chats',style: TextStyle(color: Colors.white),),
       ),
       body: Column(
@@ -30,7 +30,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     leading:CircleAvatar(
                       backgroundImage: AssetImage('images/profile.jpeg')
                       ),
-                    title: const Text('Muhammad Ibrar'),
+                    title: Text('Muhammad Ibrar'),
                     subtitle: Text('Hello'),
                     trailing: Text('5:50pm'),
                     

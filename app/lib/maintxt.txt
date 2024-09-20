@@ -1,0 +1,63 @@
+
+// getpagevoid
+
+
+import 'package:flutter/material.dart';
+import 'package:app/home_screen.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: const Text('App Bar',style: TextStyle(color: Colors.white),),
+        ),
+        drawer:  Drawer(
+          backgroundColor: Colors.teal,
+         child:ListView(
+          padding: EdgeInsets.zero,
+          children: [
+          const UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 3, 101, 92),
+            ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('images/profile.jpeg'),
+              ),
+              accountName: Text("Muhammad Ibrar"),
+              accountEmail: Text("mohummadibrar727@gmail.com")),
+
+
+              ListTile(
+                leading: const Icon(Icons.home),
+                title: const Text("Home"),
+                onTap: (){
+                    Navigator.pushNamed(context, HomeScreen.id);
+                }
+              )
+          ],
+         )
+
+        ),
+        
+      )
+    );
+  }
+}
+
+Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/background_image.png'), // Add the image path here
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),

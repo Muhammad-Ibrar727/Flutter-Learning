@@ -15,10 +15,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff764abc),
+        backgroundColor: const Color(0xff764abc),
         title: const Text('Home Page',style: TextStyle(color: Colors.white),),
       ),
       drawer: Drawer(
+        backgroundColor: const Color(0xffffffff),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -97,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      body: Column(
+      body: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

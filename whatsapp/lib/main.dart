@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-
+import 'package:whatsapp/home_screen.dart';
 void main() {
   runApp(const MyApp());
 }
-class MyApp extends StatefulWidget {
+
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Whatsapp'),
-        ),
+      title: 'Whatsapp',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
       ),
+      home:const HomeScreen(),
+      
     );
   }
 }

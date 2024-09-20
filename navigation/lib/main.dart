@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {a
     return MaterialApp(
       title: 'mainApp',
       theme: ThemeData(
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: HomeScreen.id,
       routes: {
-        HomeScreen.id :(context)=> HomeScreen(),
-        ScreenTwo.id :(context)=> ScreenTwo(),
+        HomeScreen.id :(context)=> const HomeScreen(),
+        ScreenTwo.id :(context)=> const ScreenTwo(),
       },
       // home:const HomeScreen(),
     );
