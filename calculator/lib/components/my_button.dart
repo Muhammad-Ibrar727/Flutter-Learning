@@ -21,9 +21,17 @@ class MyButton extends StatelessWidget {
               height: 70,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
+                // boxShadow: [
+                //   BoxShadow(
+                //     color:  Colors.grey.withOpacity(0.5), // Shadow color with opacity
+                //     spreadRadius: 5, // Spread radius
+                //     blurRadius: 10, // Blur radius for the shadow
+                //     offset: const Offset(0, 2), // Horizontal and vertical offset
+                //   )
+                //   ],
                 color: color,
               ),
-              child: Center(child: Text(title,style: TextStyle(color: Colors.white,fontSize: 20),)),
+              child: Center(child: Text(title,style: const TextStyle(color: Colors.white,fontSize: 20),)),
             ),
         ),
       ),

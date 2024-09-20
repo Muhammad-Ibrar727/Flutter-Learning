@@ -16,25 +16,31 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 4, 43, 53),
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Column(
               children: [
                 Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    padding: const EdgeInsets.only(top: 30,right: 20),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          userinput.toString(),
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            userinput.toString(),
+                            style: const TextStyle(fontSize: 30, color: Colors.white),
+                          ),
                         ),
+                       const SizedBox(height: 10,),
                         Text(
                           answer.toString(),
-                          style: TextStyle(fontSize: 30, color: Colors.white),
+                          style: const TextStyle(fontSize: 30, color: Colors.white),
                         )
                       ],
                     ),
@@ -71,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           MyButton(
                             title: '/',
-                            color: Color(0xffffa00a),
+                            color: const Color(0xffffa00a),
                             onPress: () {
                               userinput += '/';
                               setState(() {});
@@ -104,9 +110,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           MyButton(
                             title: 'x',
-                            color: Color(0xffffa00a),
+                            color: const Color(0xffffa00a),
                             onPress: () {
-                              userinput += 'x';
+                              userinput += '*';
                               setState(() {});
                             },
                           ),
@@ -137,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           MyButton(
                             title: '-',
-                            color: Color(0xffffa00a),
+                            color: const Color(0xffffa00a),
                             onPress: () {
                               userinput += '-';
                               setState(() {});
@@ -170,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           MyButton(
                             title: '+',
-                            color: Color(0xffffa00a),
+                            color: const Color(0xffffa00a),
                             onPress: () {
                               userinput += '+';
                               setState(() {});
@@ -205,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           MyButton(
                             title: '=',
-                            color: Color(0xffffa00a),
+                            color: const Color(0xffffa00a),
                             onPress: () {
                               equalpress();
                               setState(() {});
