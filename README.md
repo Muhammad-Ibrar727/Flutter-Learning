@@ -6,4 +6,4 @@ A new Flutter project.
 
 ## ScreenShot
 
-['screenshot/screenshot.jpg']
+['Screenshot']('screenshot/screenshot.jpg')
